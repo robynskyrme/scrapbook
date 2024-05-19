@@ -26,7 +26,7 @@ def divides(n,d):
         return False
 
 def mults(lower,upper,d):
-    for i in range(upper,lower):
+    for i in range(lower,upper):
         c = i
         for j in range(5):
             c = concat(i, c)
@@ -37,4 +37,4 @@ def mults(lower,upper,d):
 
 
 if __name__ == "__main__":
-    mults(99999,111111,7)
+    mults(99999,100001,7)
