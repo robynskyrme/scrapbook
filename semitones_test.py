@@ -4,20 +4,24 @@
 names = ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#"]
 
 shapes = {
-    "triad_major":[4,3,5],
-    "triad_minor":[3,4,5],
-    "scale_major":[2,2,1,2,2,2,1],
-    "scale_dorian":[2,1,2,2,2,1,2]
+    "triad_major":[4,3],
+    "triad_minor":[3,4],
+    "scale_major":[2,2,1,2,2,2],
+    "scale_dorian":[2,1,2,2,2,1]
 }
-
 
 def get_notes(key,shape,count):
     notes = [0]
+
+    shape = shapes[shape]
+    shape.append(12-sum(shape))
+
     key = names.index(key)
+
 
     iter = 0
     while len(notes) < count:
-        notes.append(shapes[shape][iter % len(shapes[shape])])
+        notes.append(shape[iter % len(shape)])
         iter += 1
 
     for n in range(1,len(notes)):
