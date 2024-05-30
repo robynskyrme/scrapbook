@@ -1,6 +1,5 @@
 # Basic handling of musical pitches
 
-
 names = ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#"]
 
 shapes = {

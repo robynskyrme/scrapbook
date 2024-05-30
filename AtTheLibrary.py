@@ -3,6 +3,7 @@
 
 def fremony(A,B):
     C = A[-22:]
+    B = "\n" + B
 
     output = (A + B + C +
               B[:63] + C[:9] + C[:8] + C[:22] +
@@ -25,7 +26,7 @@ def fremony(A,B):
 
 if __name__ == "__main__":
 
-    A = "A spectre is haunting Europe - the spectre of Communism."
-    B = "\nAll the Powers of old Europe have entered into a holy alliance to exorcise this spectre: Pope and Czar, Metternich and Guizot, French Radicals and German police-spies."
+    A = "It was a bright cold day in April, and the clocks were striking thirteen."
+    B = "Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him."
 
     print(fremony(A,B))
