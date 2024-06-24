@@ -29,7 +29,10 @@ def binarypossible(n,o,z):
     if binstr.count("1") > o:
         return False
 
-    print(binstr + " = " + str(n))
+    #print(binstr + " = " + str(n))
+
+    print(str(n))
+
     return True
 
 
