@@ -1,5 +1,5 @@
-# Assigning a fraction to a number based on the series
-# a/1 + (a-1)/2 + (a-3)/3 + (a-6)/4 + (a-10)/5 .......
+# Assigning a number to a based on the *non-integer parts* of elements in the series
+# a/1 + (a-1)/2 + (a-3)/3 + (a-6)/4 + (a-10)/5 ....... (while the numberator is greater than zero)
 
 
                             # m = 1, n = 2
