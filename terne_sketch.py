@@ -1,8 +1,15 @@
 # TERNE
 # ‘What should I do now?’
 #
-# A very simple program to help me get through my day, one suggestion at a time. No clutter.
-# Some prioritization.
+# A very simple program to help me get through my day, one suggestion at a time.
+# No clutter. Some prioritization.
+
+
+# 27.6.2024 --- reads file, builds deck, shuffles it with relative heft of tasks,
+#               suggests tasks when prompted until all tasks have been suggested
+#
+#               tomorrow: comment this code, please
+
 
 
 import random
@@ -15,6 +22,7 @@ class card:
 
 deck = []
 shuffle = []
+rs = 19
 
 # a task given '0' heft ("I don't know") will be assigned the mean of all explicitly hefted tasks, divided by THIS number:
 # (larger number here therefore means less likely)
