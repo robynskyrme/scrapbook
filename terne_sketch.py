@@ -24,15 +24,24 @@ deck = []
 shuffle = []
 rs = 19
 
+# weighting for UNASSIGNED tasks
 # a task given '0' heft ("I don't know") will be assigned the mean of all explicitly hefted tasks, divided by THIS number:
 # (larger number here therefore means less likely)
 zeroweight = 3
+
+
+
+                            # methods to read deck from file and store it in memory
+
+                            # Format of task / heft, as stored in file, per line:
+                            # "Shoot the king 80" (very important)
+                            # "Iron your flannel 5" (not important)
+                            # "Have coffee 0" (zero means UNASSIGNED: it's something you could do, but, shrug)
 
 def read_deck(filename):
     with open(filename) as file:
         for line in file:
             deck.append(line_to_card_split(line))
-
 
 def line_to_card_split(line):
     char = ""
