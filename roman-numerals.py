@@ -1,11 +1,14 @@
 # Arabic to Roman
 
+onetonine = ["","I","II","III","IV","V","VI","VII","VIII","XI"]
+
 def toRoman(n):
     numeral = ""
-
     while n >= 1000:
         n -= 1000
         numeral += "M"
+
+#    print(n)
 
     if n >= 900:
         n -= 900
@@ -39,14 +42,17 @@ def toRoman(n):
         n -= 10
         numeral += "X"
 
+#    print(n)
     numeral += onetonine[n]
+
+
 
     return numeral
 
 
 
 if __name__ == "__main__":
-    for j in range(1,2345):
+    for j in range(1,4999):
         ans = toRoman(j)
         if len(ans) <= len(str(j)):
             print((str(j)) + ": " + ans)
