@@ -112,9 +112,7 @@ def connect_wire(left,right,gate,target):
 
         if target[0] == "z":
             zval = int(target[1:])
-            #print(zval)
             z_counter[zval] = 1
-            #print(z_counter)
 
 
 if __name__ == "__main__":
