@@ -15,7 +15,7 @@ def tabulate(input):
 
 def gen_days(fish,days):
 
-    if days == 0:
+    if days == 0:                       # escape recursion
         return fish
 
     p = fish.pop(0)                     # this value is the number of fish on 'day zero'
@@ -24,7 +24,7 @@ def gen_days(fish,days):
     fish[6] += p                        # and each of those fish is reset to day 7
     print(fish)
 
-    days -= 1                           # recursion
+    days -= 1                           # behave recursively
     fish = gen_days(fish,days)
 
     return fish
