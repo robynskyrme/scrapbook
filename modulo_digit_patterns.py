@@ -7,7 +7,7 @@ def show_patterns(n):
     digits = []
 
     for i in range(n):
-        digits.append((i * 2 + 1) % n)
+        digits.append((i * 3 + 1) % n)                  # trying 3x + 1
 
 
     cycles = []
@@ -61,7 +61,7 @@ def prime(n):
 
 if __name__ == "__main__":
 
-    for p in range(100):
+    for p in range(20):
         #cycle_counts = []
 
         cycles = show_patterns(p)
