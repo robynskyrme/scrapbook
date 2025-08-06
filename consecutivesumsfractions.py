@@ -112,8 +112,36 @@ def return_only_x_with_k_integer_divs(low, high,k):
 #            print("             " + str(count))
 
 
+def farey_entire(low, high,mn):
+    for x in range(low,high+1):
+        a = x
+        b = 1
+        m = n = 0
+
+        while a > 0:
+            int_str = ""
+
+            m += a
+            n += b
+
+            a -= b
+            b += 1
+
+        #print((str(m)) + "/" + str(n))
+        if mn == 1:
+            print(m)
+        if mn == 2:
+            print(n)
+        if mn == 3 and n != 0:
+            bar = "*"
+            strx = str(x)
+            width = 163
+            print(strx.rjust(7, " ") + bar.rjust(int(width*(m/n))," "))
+
+
 if __name__ == "__main__":
-     #farey_vals(1000000,1010000,2)
-     #add_frac_vals(1,15)
-     count_integer_divs(1 ,250000)
-     #return_only_x_with_k_integer_divs(1,10000,7)
+     #farey_vals(1,10000,2)
+     # add_frac_vals(1,15)
+     # count_integer_divs(1 ,250000)
+     # return_only_x_with_k_integer_divs(1,10000,7)
+     farey_entire(1,10000,2)
