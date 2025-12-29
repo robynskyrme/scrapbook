@@ -1,7 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 def is_letter(letter):
     k = ord(letter)
@@ -29,7 +25,7 @@ def shift_letter(letter,s):
 
     # ... but check that
     if k < 97:
-:        lowercase = False
+        lowercase = False
 
     # Assign the letter a number from 1 to 26 (well, from 0 to 25)
     if lowercase:
